@@ -20,6 +20,8 @@ namespace Reverse_Array
             Console.ReadLine();
 
             Reverse(numGroup);
+
+            Console.ReadLine();
         }
 
         static void Reverse(int[] numArray) // Reversing the Given Arrays;
@@ -27,15 +29,21 @@ namespace Reverse_Array
             Console.WriteLine("-------------------");
             Console.WriteLine("Reversed Array");
 
-            Array.Reverse(numArray);
+            #region Using Array.Reverse
+            //Array.Reverse(numArray);
 
-            for (int i = 0; i < numArray.Length; i++)
+            //for (int i = 0; i < numArray.Length; i++)
+            //    Console.Write($"{numArray[i]} ");
+
+            //Console.WriteLine();
+            #endregion
+
+            for (int i = numArray.Length - 1; i >= 0; i--)
                 Console.Write($"{numArray[i]} ");
 
             Console.WriteLine();
             Console.WriteLine("-------------------");
             Console.WriteLine("Press Enter to Exit");
-            Console.ReadLine();
         }
     }
 }
